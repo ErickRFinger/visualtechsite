@@ -1,0 +1,18 @@
+INSTRUÇÕES PARA UPLOAD NO GITHUB
+
+IMPORTANTE: Antes de fazer o upload, DELETE a pasta node_modules:
+
+1. Feche todos os programas (VS Code, navegador, etc.)
+2. Delete a pasta "node_modules" manualmente pelo Windows Explorer
+3. Se não conseguir deletar, reinicie o computador e tente novamente
+
+Depois execute os comandos:
+
+git init
+git add .
+git commit -m "VisualTech Site Principal"
+git branch -M main
+git remote add origin https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+git push -u origin main
+
+O .gitignore vai garantir que apenas os arquivos essenciais sejam enviados.
