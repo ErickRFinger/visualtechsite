@@ -5193,7 +5193,7 @@ body {
   }
   
   .servicos-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: 1.5rem;
   }
   
@@ -5891,6 +5891,20 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Garantir 1 card por linha em mobile - FORÇA */
+@media (max-width: 767px) {
+  .servicos-grid {
+    grid-template-columns: 1fr !important;
+    display: grid !important;
+  }
+  
+  .servico-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+}
+
 /* Responsividade para Serviços - NOVO DESIGN */
 @media (min-width: 768px) {
   .servicos-grid {
@@ -5904,13 +5918,6 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
-}
-
-/* Conteúdo do Card */
-.servico-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
 }
 
 .servico-content h4 {
@@ -6050,7 +6057,7 @@ body {
   }
   
   .servicos-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: 1.2rem;
   }
   
@@ -6162,6 +6169,7 @@ body {
   }
   
   .servicos-grid {
+    grid-template-columns: 1fr !important;
     gap: 1rem;
   }
   
