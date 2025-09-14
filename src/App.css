@@ -5775,115 +5775,88 @@ body {
   opacity: 0.9;
 }
 
-/* Grid de Serviços */
+/* Grid de Serviços - NOVO DESIGN */
 .servicos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-/* Cards de Serviços */
+/* Cards de Serviços - NOVO DESIGN */
 .servico-card {
-  background: rgba(0, 0, 0, 0.9);
-  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
   padding: 1.5rem;
-  border: 2px solid transparent;
-  backdrop-filter: blur(15px);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  min-height: 280px;
-  display: flex;
-  flex-direction: column;
 }
 
 .servico-card.presencial {
   border-color: rgba(76, 175, 80, 0.3);
-  box-shadow: 0 20px 60px rgba(76, 175, 80, 0.1);
+  box-shadow: 0 10px 30px rgba(76, 175, 80, 0.1);
 }
 
 .servico-card.remoto {
   border-color: rgba(33, 150, 243, 0.3);
-  box-shadow: 0 20px 60px rgba(33, 150, 243, 0.1);
+  box-shadow: 0 10px 30px rgba(33, 150, 243, 0.1);
 }
 
 .servico-card.destaque {
   border-color: rgba(255, 230, 0, 0.5);
-  box-shadow: 0 20px 60px rgba(255, 230, 0, 0.2);
-  background: linear-gradient(135deg, rgba(255, 230, 0, 0.1), rgba(0, 0, 0, 0.9));
+  box-shadow: 0 10px 30px rgba(255, 230, 0, 0.2);
+  background: linear-gradient(135deg, rgba(255, 230, 0, 0.05), rgba(0, 0, 0, 0.8));
 }
 
-.servico-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, currentColor, transparent);
-  animation: shimmer 3s infinite;
-}
-
-.servico-card.presencial::before {
-  color: #4CAF50;
-}
-
-.servico-card.remoto::before {
-  color: #2196F3;
-}
-
-.servico-card.destaque::before {
-  color: #ffe600;
-}
 
 .servico-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 .servico-card.presencial:hover {
-  box-shadow: 0 30px 80px rgba(76, 175, 80, 0.3);
-  border-color: rgba(76, 175, 80, 0.5);
+  box-shadow: 0 15px 40px rgba(76, 175, 80, 0.2);
 }
 
 .servico-card.remoto:hover {
-  box-shadow: 0 30px 80px rgba(33, 150, 243, 0.3);
-  border-color: rgba(33, 150, 243, 0.5);
+  box-shadow: 0 15px 40px rgba(33, 150, 243, 0.2);
 }
 
 .servico-card.destaque:hover {
-  box-shadow: 0 30px 80px rgba(255, 230, 0, 0.4);
-  border-color: rgba(255, 230, 0, 0.7);
+  box-shadow: 0 15px 40px rgba(255, 230, 0, 0.3);
 }
 
-/* Header do Card com Ícone e Preço */
+/* Header do Card - NOVO DESIGN */
 .servico-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .servico-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   opacity: 0.9;
 }
 
 .servico-preco {
-  text-align: right;
   background: rgba(255, 230, 0, 0.1);
   padding: 0.5rem 1rem;
-  border-radius: 15px;
+  border-radius: 10px;
   border: 1px solid rgba(255, 230, 0, 0.3);
+  text-align: center;
 }
 
 .preco-valor {
   display: block;
   color: #ffe600;
-  font-size: 1.5rem;
-  font-weight: 900;
+  font-size: 1.2rem;
+  font-weight: 700;
   line-height: 1;
 }
 
@@ -5893,6 +5866,44 @@ body {
   font-size: 0.8rem;
   margin-top: 0.2rem;
   opacity: 0.8;
+}
+
+/* Conteúdo do Card - NOVO DESIGN */
+.servico-content h4 {
+  color: #ffe600;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.servico-content p {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.servico-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsividade para Serviços - NOVO DESIGN */
+@media (min-width: 768px) {
+  .servicos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .servicos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
 }
 
 /* Conteúdo do Card */
