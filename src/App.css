@@ -5775,15 +5775,16 @@ body {
   opacity: 0.9;
 }
 
-/* Grid de Serviços - NOVO DESIGN */
+/* GRID DE SERVIÇOS - VERSÃO FINAL OTIMIZADA */
 .servicos-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
-/* Cards de Serviços - NOVO DESIGN */
+/* CARDS DE SERVIÇOS - VERSÃO FINAL OTIMIZADA */
 .servico-card {
   background: rgba(0, 0, 0, 0.8);
   border-radius: 15px;
@@ -5793,6 +5794,8 @@ body {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .servico-card.presencial {
@@ -5810,7 +5813,6 @@ body {
   box-shadow: 0 10px 30px rgba(255, 230, 0, 0.2);
   background: linear-gradient(135deg, rgba(255, 230, 0, 0.05), rgba(0, 0, 0, 0.8));
 }
-
 
 .servico-card:hover {
   transform: translateY(-3px);
@@ -5891,33 +5893,97 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Garantir 1 card por linha em mobile - FORÇA */
+/* RESPONSIVIDADE OTIMIZADA - VERSÃO FINAL */
 @media (max-width: 767px) {
   .servicos-grid {
     grid-template-columns: 1fr !important;
     display: grid !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   
   .servico-card {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
+    margin-bottom: 1rem !important;
+    display: block !important;
+    float: none !important;
+    clear: both !important;
+    box-sizing: border-box !important;
+    padding: 1.5rem !important;
+  }
+  
+  .servico-card:last-child {
+    margin-bottom: 0 !important;
   }
 }
 
-/* Responsividade para Serviços - NOVO DESIGN */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .servicos-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
   }
 }
 
 @media (min-width: 1024px) {
   .servicos-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
   }
+}
+
+/* AJUSTES FINOS E GARANTIA DE FUNCIONAMENTO PERFEITO */
+@media screen and (max-width: 767px) {
+  .servicos-section .servicos-grid {
+    display: block !important;
+    grid-template-columns: none !important;
+    width: 100% !important;
+  }
+  
+  .servicos-section .servico-card {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 1.5rem 0 !important;
+    float: none !important;
+    clear: both !important;
+    position: relative !important;
+  }
+  
+  .servicos-section .servico-card:last-of-type {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* ESPECÍFICO PARA WEBKIT (SAFARI/iOS) */
+@supports (-webkit-appearance: none) {
+  @media (max-width: 767px) {
+    .servicos-grid {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1.5rem !important;
+    }
+    
+    .servico-card {
+      flex: none !important;
+      width: 100% !important;
+      margin: 0 !important;
+    }
+  }
+}
+
+/* FALLBACK PARA DISPOSITIVOS ANTIGOS */
+.servicos-grid.fallback {
+  display: block !important;
+}
+
+.servicos-grid.fallback .servico-card {
+  display: block !important;
+  width: 100% !important;
+  margin-bottom: 1.5rem !important;
 }
 
 .servico-content h4 {
