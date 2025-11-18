@@ -972,7 +972,7 @@ _Formulário enviado via site da VisualTech_`
                     <div className="servico-header">
                       <div className="servico-icon">💻</div>
                       <div className="servico-preco">
-                        <span className="preco-valor">R$ 350</span>
+                        <span className="preco-valor">R$ 400</span>
                       </div>
                     </div>
                     <div className="servico-content">
@@ -990,7 +990,7 @@ _Formulário enviado via site da VisualTech_`
                     <div className="servico-header">
                       <div className="servico-icon">🧹</div>
                       <div className="servico-preco">
-                        <span className="preco-valor">R$ 200</span>
+                        <span className="preco-valor">R$ 300</span>
                       </div>
                     </div>
                     <div className="servico-content">
@@ -1907,6 +1907,7 @@ _Formulário enviado via site da VisualTech_`
 
 
 export default App 
+
 
 
 
