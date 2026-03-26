@@ -1519,7 +1519,7 @@ _Formulário enviado via site da VisualTech_`
                    <span className="subtitulo-sobre-mim">Desenvolvedor Full-Stack & Especialista em Tecnologia</span>
                    <div className="perfil-stats">
                      <div className="stat-item">
-                       <span className="stat-number">4+</span>
+                       <span className="stat-number">5+</span>
                        <span className="stat-label">Anos de Experiência</span>
                      </div>
                      <div className="stat-item">
@@ -1805,7 +1805,7 @@ _Formulário enviado via site da VisualTech_`
                       <span>✓ Painel administrativo</span>
                     </div>
                     <div className="card-price">
-                      <span className="price-value">R$ 800,00</span>
+                      <span className="price-value">R$ 1500,00</span>
                       <span className="price-label">a partir de</span>
                     </div>
                     <a href="https://wa.me/5549920014159?text=Tenho interesse em um Site Institucional. Pode me enviar mais detalhes?" target="_blank" rel="noopener noreferrer" className="whatsapp-btn card-btn">Solicitar Orçamento</a>
@@ -1827,7 +1827,7 @@ _Formulário enviado via site da VisualTech_`
                       <span>✓ Relatórios de vendas</span>
                     </div>
                     <div className="card-price">
-                      <span className="price-value">R$ 1.500,00</span>
+                      <span className="price-value">R$ 2.500,00</span>
                       <span className="price-label">a partir de</span>
                     </div>
                     <a href="https://wa.me/5549920014159?text=Tenho interesse em um E-commerce. Pode me enviar mais detalhes?" target="_blank" rel="noopener noreferrer" className="whatsapp-btn card-btn">Solicitar Orçamento</a>
@@ -1849,7 +1849,7 @@ _Formulário enviado via site da VisualTech_`
                       <span>✓ Integração com APIs</span>
                     </div>
                     <div className="card-price">
-                      <span className="price-value">R$ 2.500,00</span>
+                      <span className="price-value">R$ 4.000,00</span>
                       <span className="price-label">a partir de</span>
                     </div>
                     <a href="https://wa.me/5549920014159?text=Tenho interesse em um Sistema Empresarial. Pode me enviar mais detalhes?" target="_blank" rel="noopener noreferrer" className="whatsapp-btn card-btn">Solicitar Orçamento</a>
