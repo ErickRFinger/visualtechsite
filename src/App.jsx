@@ -2,40 +2,13 @@ import { useState, useEffect, useRef } from 'react'
 import visualLogo from './logo/Visual.png'
 import './App.css'
 import React from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useGSAP } from '@gsap/react'
+
+gsap.registerPlugin(ScrollTrigger)
 
 // Sistema de animações de scroll otimizado - SEM LOOP INFINITO
-function useScrollAnimation() {
-  const elementRef = useRef(null)
-
-  useEffect(() => {
-    const currentElement = elementRef.current
-    if (!currentElement) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && !entry.target.classList.contains('animate-in')) {
-            entry.target.classList.add('animate-in')
-          }
-        })
-      },
-      { 
-        threshold: 0.1, 
-        rootMargin: '0px 0px -50px 0px' 
-      }
-    )
-
-    observer.observe(currentElement)
-
-    return () => {
-      observer.unobserve(currentElement)
-      observer.disconnect()
-    }
-  }, [])
-
-  return elementRef
-}
-
 const TABS = {
   QUEM_SOMOS: 'Quem Somos?',
   SERVICOS: 'Serviços',
@@ -399,11 +372,56 @@ function App() {
   }
 
   const handleSearchResultClick = (result) => {
-    setTab(result.tab)
+    
+    const targetId = result.tab === TABS.QUEM_SOMOS ? '#quem-somos' :
+                     result.tab === TABS.SERVICOS ? '#servico' :
+                     result.tab === TABS.PRODUTOS ? '#produtos' :
+                     result.tab === TABS.DESENVOLVIMENTO ? '#desenvolvimento' :
+                     result.tab === TABS.PLANOS ? '#planos' :
+                     result.tab === TABS.PACOTES ? '#pacotes' :
+                     result.tab === TABS.TECNICO ? '#tecnico' : '#orcamentos';
+    document.querySelector(targetId)?.scrollIntoView({behavior: 'smooth'})
+  
     setSearchQuery('')
     setSearchResults([])
     setShowSearch(false)
   }
+
+  useGSAP(() => {
+    
+    
+  
+    // Parallax hero
+    gsap.to('.hero-background', {
+      yPercent: 30,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.hero-section',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true
+      }
+    });
+
+    // Reveal elements on scroll
+    const sections = gsap.utils.toArray('section.scroll-animate');
+    sections.forEach(section => {
+      gsap.fromTo(section, 
+        { autoAlpha: 0, y: 50 },
+        { 
+          duration: 1, 
+          autoAlpha: 1, 
+          y: 0, 
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse'
+          }
+        }
+      );
+    });
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -432,12 +450,12 @@ function App() {
 • Telefone: ${form.telefone}
 ${form.empresa ? `• Empresa: ${form.empresa}` : ''}
 
-*🎯 Detalhes do Projeto:*
+*Detalhes do Projeto:*
 • Tipo de Serviço: ${form.tipoServico}
 ${form.urgencia ? `• Urgência: ${form.urgencia}` : ''}
 • Descrição: ${form.mensagem}
 
-*📅 Preferências:*
+*Preferências:*
 ${form.orcamentoPor ? `• Orçamento por: ${form.orcamentoPor}` : ''}
 ${form.horarioContato ? `• Melhor horário: ${form.horarioContato}` : ''}
 
@@ -458,7 +476,7 @@ _Formulário enviado via site da VisualTech_`
       
       // Abrir WhatsApp após 2 segundos
       setTimeout(() => {
-        window.open(`https://wa.me/5549920014159?text=${encodeURIComponent(mensagemWhatsApp)}`)
+        window.open(`https://wa.me/554988475867?text=${encodeURIComponent(mensagemWhatsApp)}`)
       }, 2000)
     } catch (error) {
       addNotification('Erro ao enviar formulário. Tente novamente.', 'error')
@@ -529,21 +547,6 @@ _Formulário enviado via site da VisualTech_`
               </div>
             </div>
           </div>
-          
-          <div className="loading-features">
-            <div className="feature-item">
-              <span className="feature-icon">⚡</span>
-              <span>Sistema Otimizado</span>
-            </div>
-            <div className="feature-item">
-              <span className="feature-icon">🔒</span>
-              <span>Segurança Avançada</span>
-            </div>
-            <div className="feature-item">
-              <span className="feature-icon">🚀</span>
-              <span>Performance Máxima</span>
-            </div>
-          </div>
         </div>
       </div>
     )
@@ -566,7 +569,7 @@ _Formulário enviado via site da VisualTech_`
           </div>
         ))}
       </div>
-      
+
       <header className="header-visualtech-central">
         <img src={visualLogo} alt="Logo Visual Tech" className="logo-central" />
         
@@ -607,7 +610,7 @@ _Formulário enviado via site da VisualTech_`
                      ✕
                    </button>
                  )}
-                 <span className="search-icon">🔍</span>
+                 <span className="search-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
                </div>
              </div>
              
@@ -686,74 +689,16 @@ _Formulário enviado via site da VisualTech_`
         
         {/* Menu Desktop */}
         <nav className={`menu-central ${mobileMenuOpen ? 'mobile-open' : ''}`}>
-          <button 
-            className={tab === TABS.QUEM_SOMOS ? 'active' : ''} 
-            onClick={() => {
-              setTab(TABS.QUEM_SOMOS)
-              setMobileMenuOpen(false)
-            }}
-          >
-            {TABS.QUEM_SOMOS}
-          </button>
-          <button 
-            className={tab === TABS.SERVICOS ? 'active' : ''} 
-            onClick={() => {
-              setTab(TABS.SERVICOS)
-              setMobileMenuOpen(false)
-            }}
-          >
-            {TABS.SERVICOS}
-          </button>
-          <button 
-            className={tab === TABS.PRODUTOS ? 'active' : ''} 
-            onClick={() => {
-              setTab(TABS.PRODUTOS)
-              setMobileMenuOpen(false)
-            }}
-          >
-            {TABS.PRODUTOS}
-          </button>
-          <button 
-            className={tab === TABS.DESENVOLVIMENTO ? 'active' : ''} 
-            onClick={() => {
-              setTab(TABS.DESENVOLVIMENTO)
-              setMobileMenuOpen(false)
-            }}
-          >
-            {TABS.DESENVOLVIMENTO}
-          </button>
-          <button 
-            className={tab === TABS.PLANOS ? 'active' : ''} 
-            onClick={() => {
-              setTab(TABS.PLANOS)
-              setMobileMenuOpen(false)
-            }}
-          >
-            {TABS.PLANOS}
-          </button>
-          <button 
-            className={tab === TABS.PACOTES ? 'active' : ''} 
-            onClick={() => {
-              setTab(TABS.PACOTES)
-              setMobileMenuOpen(false)
-            }}
-          >
-            {TABS.PACOTES}
-          </button>
-          <button 
-            className={tab === TABS.TECNICO ? 'active' : ''} 
-            onClick={() => {
-              setTab(TABS.TECNICO)
-              setMobileMenuOpen(false)
-            }}
-          >
-            {TABS.TECNICO}
-          </button>
+          <button onClick={() => { document.querySelector('#quem-somos')?.scrollIntoView({behavior: 'smooth'}); setMobileMenuOpen(false); }}>INÍCIO</button>
+          <button onClick={() => { document.querySelector('.diferenciais-section')?.scrollIntoView({behavior: 'smooth'}); setMobileMenuOpen(false); }}>SOBRE NÓS</button>
+          <button onClick={() => { document.querySelector('#servico')?.scrollIntoView({behavior: 'smooth'}); setMobileMenuOpen(false); }}>SERVIÇOS</button>
+          <button onClick={() => { document.querySelector('#orcamentos')?.scrollIntoView({behavior: 'smooth'}); setMobileMenuOpen(false); }}>ORÇAMENTOS</button>
+          <button onClick={() => { document.querySelector('#planos')?.scrollIntoView({behavior: 'smooth'}); setMobileMenuOpen(false); }}>PLANOS</button>
+          <button onClick={() => { document.querySelector('#tecnico')?.scrollIntoView({behavior: 'smooth'}); setMobileMenuOpen(false); }}>TÉCNICO</button>
         </nav>
       </header>
       <main className="main-visualtech">
-        {tab === TABS.QUEM_SOMOS && (
-          <section className="tela-inicial-visualtech">
+        <section id="quem-somos" className="tela-inicial-visualtech">
             {/* Hero Section Moderno */}
             <div className="hero-section scroll-animate">
               <div className="hero-background">
@@ -767,13 +712,20 @@ _Formulário enviado via site da VisualTech_`
                   <div className="logo-glow"></div>
                 </div>
                 
-                <h1 className="hero-title">
-                  Bem-vindo à <span className="hero-highlight">VisualTech</span>
-                </h1>
                 
-                <p className="hero-subtitle">
-                  Transformando ideias em <span className="text-gradient">soluções digitais</span><br/>
-                  que impulsionam seu negócio
+                <div className="marquee-container">
+                  <div className="marquee">
+                    <span>VISUALTECH PERFORMANCE &bull; SOLUÇÕES DIGITAIS &bull; ALTA VELOCIDADE &bull; VISUALTECH PERFORMANCE &bull; SOLUÇÕES DIGITAIS &bull; ALTA VELOCIDADE &bull;</span>
+                  </div>
+                </div>
+                <h1 className="hero-title lando-title">
+                  <span className="hollow-text">VISUAL</span><br/>
+                  <span className="solid-text">TECH.</span>
+                </h1>
+  
+                
+                <p className="hero-subtitle lando-subtitle">
+                  TRANSFORMANDO IDEIAS EM <span className="text-highlight-lando">POTÊNCIA DIGITAL</span>
                 </p>
                 
                 <div className="hero-stats">
@@ -800,7 +752,7 @@ _Formulário enviado via site da VisualTech_`
                 <p className="social-hero-subtitle">Entre em contato e descubra como podemos ajudar</p>
                 
                 <div className="social-hero-buttons">
-                  <a className="whatsapp-btn hero-social" href="https://wa.me/5549920014159" target="_blank" rel="noopener noreferrer">
+                  <a className="whatsapp-btn hero-social" href="https://wa.me/554988475867" target="_blank" rel="noopener noreferrer">
                     <span className="social-icon">💬</span>
                     WhatsApp
                   </a>
@@ -870,7 +822,7 @@ _Formulário enviado via site da VisualTech_`
                   <div className="quem-somos-cta">
                     <button 
                       className="cta-btn" 
-                      onClick={() => setTab(TABS.ORCAMENTOS)}
+                      onClick={() => document.querySelector('#orcamentos')?.scrollIntoView({behavior: 'smooth'})}
                       title="Pressione Q para ativar rapidamente"
                     >
                       <span className="btn-content">
@@ -882,10 +834,7 @@ _Formulário enviado via site da VisualTech_`
                 </div>
               </div>
             </section>
-          </section>
-        )}
-        {tab === TABS.SERVICOS && (
-          <section className="servicos-section scroll-animate">
+<section id="servico" className="servicos-section scroll-animate">
             <div className="servicos-container">
               <div className="servicos-header">
                 <h2 className="section-title">Nossos Serviços</h2>
@@ -1121,12 +1070,12 @@ _Formulário enviado via site da VisualTech_`
                 <div className="cta-buttons">
                   <button 
                     className="cta-btn" 
-                    onClick={() => setTab(TABS.ORCAMENTOS)}
+                    onClick={() => document.querySelector('#orcamentos')?.scrollIntoView({behavior: 'smooth'})}
                   >
                     Solicitar Orçamento
                   </button>
                   <a 
-                    href="https://wa.me/5549920014159?text=Olá! Gostaria de mais informações sobre os serviços da VisualTech." 
+                    href="https://wa.me/554988475867?text=Olá! Gostaria de mais informações sobre os serviços da VisualTech." 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="whatsapp-btn"
@@ -1137,86 +1086,8 @@ _Formulário enviado via site da VisualTech_`
               </div>
             </div>
           </section>
-        )}
-        {tab === TABS.PRODUTOS && (
-          <section className="produtos-section scroll-animate">
-            <div className="produtos-container">
-              <div className="produtos-header">
-                <h2 className="section-title">Nossa Loja</h2>
-                <p className="section-subtitle">
-                  Catálogo completo de produtos de tecnologia com preços atualizados
-                </p>
-                <div className="sync-status" id="syncStatus" style={{display: loadingProdutos ? 'flex' : 'none'}}>
-                  <i className="fas fa-sync-alt"></i>
-                  <span>Sincronização automática ativa - verificando a cada 2 minutos</span>
-                </div>
-              </div>
 
-              <div className="produtos-grid" id="produtosGrid">
-                {loadingProdutos ? (
-                  <div className="loading-produtos">
-                    <div className="loading-spinner"></div>
-                    <p>Carregando produtos...</p>
-                  </div>
-                ) : (
-                  produtos.map((produto, index) => (
-                    <div key={produto.id || index} className="produto-card">
-                      <div className="produto-image-container">
-                        <img 
-                          src={produto.foto} 
-                          alt={produto.nome} 
-                          className="produto-image"
-                          onLoad={() => console.log('✅ Imagem carregou:', produto.nome)}
-                          onError={(e) => {
-                            console.log('❌ Erro ao carregar:', produto.nome, 'URL:', produto.foto);
-                            e.target.src = `https://via.placeholder.com/400x300/4F46E5/FFFFFF?text=${encodeURIComponent(produto.nome)}`;
-                          }} 
-                        />
-                      </div>
-                      <div className="produto-info">
-                        <div className="produto-category-badge">{produto.categoria}</div>
-                        <h3 className="produto-name">{produto.nome}</h3>
-                        <p className="produto-description">{produto.descricao}</p>
-                        <div className="produto-price">{produto.valor}</div>
-                        <button 
-                          className="btn btn-buy" 
-                          onClick={() => window.open(`https://wa.me/5549920014159?text=Olá! Gostaria de adquirir o produto: *${produto.nome}* por ${produto.valor}. Podem me ajudar com mais informações?`, '_blank')}
-                        >
-                          <i className="fab fa-whatsapp"></i>
-                          COMPRAR
-                        </button>
-                      </div>
-                    </div>
-                  ))
-                )}
-              </div>
-
-              {/* Call to Action */}
-              <div className="produtos-cta">
-                <h3>Interessado em nossos produtos?</h3>
-                <p>Entre em contato para mais informações sobre disponibilidade e condições especiais</p>
-                <div className="cta-buttons">
-                  <a 
-                    href="https://wa.me/5549920014159?text=Olá! Gostaria de saber mais sobre os produtos da VisualTech." 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="whatsapp-btn"
-                  >
-                    Falar no WhatsApp
-                  </a>
-                  <button 
-                    className="cta-btn" 
-                    onClick={() => setTab(TABS.ORCAMENTOS)}
-                  >
-                    Solicitar Orçamento
-                  </button>
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
-        {tab === TABS.ORCAMENTOS && (
-          <section className="orcamentos-section scroll-animate">
+<section id="orcamentos" className="orcamentos-section scroll-animate">
             <div className="orcamentos-container">
               <div className="orcamentos-header">
                 <div className="orcamentos-icon">💼</div>
@@ -1245,7 +1116,7 @@ _Formulário enviado via site da VisualTech_`
                 
                 <form className="form-orcamento-modern" onSubmit={handleSubmit}>
                   <div className="form-section">
-                    <h4 className="section-title">📋 Informações Pessoais</h4>
+                    <h4 className="section-title">Informações Pessoais</h4>
                     <div className="form-row">
                       <div className="form-group">
                         <label htmlFor="nome">Nome Completo *</label>
@@ -1408,9 +1279,7 @@ _Formulário enviado via site da VisualTech_`
               </div>
             </div>
           </section>
-        )}
-        {tab === TABS.PLANOS && (
-          <section className="planos-section scroll-animate">
+<section id="planos" className="planos-section scroll-animate">
             <div className="planos-container">
               <div className="planos-header">
                 <h2 className="section-title">Nossos Planos</h2>
@@ -1462,7 +1331,7 @@ _Formulário enviado via site da VisualTech_`
                   
                   <div className="plano-cta">
                     <a 
-                      href="https://wa.me/5549920014159?text=Tenho interesse no Plano Mensalidade de Sistema de Otimização Premium" 
+                      href="https://wa.me/554988475867?text=Tenho interesse no Plano Mensalidade de Sistema de Otimização Premium" 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="whatsapp-btn plano-btn"
@@ -1506,9 +1375,7 @@ _Formulário enviado via site da VisualTech_`
               </div>
             </div>
           </section>
-        )}
-                 {tab === TABS.TECNICO && (
-           <section className="tecnica-section scroll-animate">
+<section id="tecnico" className="tecnica-section scroll-animate">
              <div className="card-sobre-mim">
                <div className="perfil-header">
                  <div className="perfil-avatar">
@@ -1703,12 +1570,12 @@ _Formulário enviado via site da VisualTech_`
                  <div className="cta-buttons">
                    <button 
                      className="cta-btn" 
-                     onClick={() => setTab(TABS.ORCAMENTOS)}
+                     onClick={() => document.querySelector('#orcamentos')?.scrollIntoView({behavior: 'smooth'})}
                    >
                      Solicitar Orçamento
                    </button>
                    <a 
-                     href="https://wa.me/5549920014159?text=Olá! Gostaria de conversar sobre um projeto de desenvolvimento ou consultoria técnica." 
+                     href="https://wa.me/554988475867?text=Olá! Gostaria de conversar sobre um projeto de desenvolvimento ou consultoria técnica." 
                      target="_blank" 
                      rel="noopener noreferrer" 
                      className="whatsapp-btn"
@@ -1719,9 +1586,7 @@ _Formulário enviado via site da VisualTech_`
                </div>
              </div>
            </section>
-         )}
-        {tab === TABS.PACOTES && (
-          <section className="pacotes-section scroll-animate">
+<section id="pacotes" className="pacotes-section scroll-animate">
             <div className="pacotes-container">
               <div className="pacotes-header">
                 <h2 className="section-title">Nossos Pacotes Especiais</h2>
@@ -1748,7 +1613,7 @@ _Formulário enviado via site da VisualTech_`
                     <span className="preco-valor">R$ 150,00</span>
                     <span className="preco-periodo">por ano</span>
                   </div>
-                  <a href="https://wa.me/5549920014159?text=Tenho interesse no Pacote Otimização e Gestor Empresarial - R$ 150,00 por ano" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">Contratar via WhatsApp</a>
+                  <a href="https://wa.me/554988475867?text=Tenho interesse no Pacote Otimização e Gestor Empresarial - R$ 150,00 por ano" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">Contratar via WhatsApp</a>
                 </div>
                 <div className="pacote-card gaming">
                   <div className="pacote-header">
@@ -1767,14 +1632,12 @@ _Formulário enviado via site da VisualTech_`
                     <span className="preco-valor">R$ 130,00</span>
                     <span className="preco-periodo">por ano</span>
                   </div>
-                  <a href="https://wa.me/5549920014159?text=Tenho interesse no Pacote Otimização e Overlay de Jogos - R$ 130,00 por ano" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">Contratar via WhatsApp</a>
+                  <a href="https://wa.me/554988475867?text=Tenho interesse no Pacote Otimização e Overlay de Jogos - R$ 130,00 por ano" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">Contratar via WhatsApp</a>
                 </div>
               </div>
             </div>
           </section>
-        )}
-        {tab === TABS.DESENVOLVIMENTO && (
-          <section className="desenvolvimento-section scroll-animate">
+<section id="desenvolvimento" className="desenvolvimento-section scroll-animate">
             <div className="desenvolvimento-container">
               <div className="desenvolvimento-header">
                 <h2 className="section-title">Desenvolvimento de Software e Sites</h2>
@@ -1808,7 +1671,7 @@ _Formulário enviado via site da VisualTech_`
                       <span className="price-value">R$ 1500,00</span>
                       <span className="price-label">a partir de</span>
                     </div>
-                    <a href="https://wa.me/5549920014159?text=Tenho interesse em um Site Institucional. Pode me enviar mais detalhes?" target="_blank" rel="noopener noreferrer" className="whatsapp-btn card-btn">Solicitar Orçamento</a>
+                    <a href="https://wa.me/554988475867?text=Tenho interesse em um Site Institucional. Pode me enviar mais detalhes?" target="_blank" rel="noopener noreferrer" className="whatsapp-btn card-btn">Solicitar Orçamento</a>
                   </div>
                 </div>
 
@@ -1830,7 +1693,7 @@ _Formulário enviado via site da VisualTech_`
                       <span className="price-value">R$ 2.500,00</span>
                       <span className="price-label">a partir de</span>
                     </div>
-                    <a href="https://wa.me/5549920014159?text=Tenho interesse em um E-commerce. Pode me enviar mais detalhes?" target="_blank" rel="noopener noreferrer" className="whatsapp-btn card-btn">Solicitar Orçamento</a>
+                    <a href="https://wa.me/554988475867?text=Tenho interesse em um E-commerce. Pode me enviar mais detalhes?" target="_blank" rel="noopener noreferrer" className="whatsapp-btn card-btn">Solicitar Orçamento</a>
                   </div>
                 </div>
 
@@ -1852,7 +1715,7 @@ _Formulário enviado via site da VisualTech_`
                       <span className="price-value">R$ 4.000,00</span>
                       <span className="price-label">a partir de</span>
                     </div>
-                    <a href="https://wa.me/5549920014159?text=Tenho interesse em um Sistema Empresarial. Pode me enviar mais detalhes?" target="_blank" rel="noopener noreferrer" className="whatsapp-btn card-btn">Solicitar Orçamento</a>
+                    <a href="https://wa.me/554988475867?text=Tenho interesse em um Sistema Empresarial. Pode me enviar mais detalhes?" target="_blank" rel="noopener noreferrer" className="whatsapp-btn card-btn">Solicitar Orçamento</a>
                   </div>
                 </div>
               </div>
@@ -1887,10 +1750,10 @@ _Formulário enviado via site da VisualTech_`
                 <h3>Pronto para transformar sua ideia em realidade?</h3>
                 <p>Entre em contato conosco para uma consulta gratuita e descubra como podemos ajudar seu negócio a crescer!</p>
                 <div className="cta-buttons">
-                  <a href="https://wa.me/5549920014159?text=Olá! Gostaria de uma consulta gratuita sobre desenvolvimento de software/site para minha empresa." target="_blank" rel="noopener noreferrer" className="cta-btn">Agendar Consulta Gratuita</a>
+                  <a href="https://wa.me/554988475867?text=Olá! Gostaria de uma consulta gratuita sobre desenvolvimento de software/site para minha empresa." target="_blank" rel="noopener noreferrer" className="cta-btn">Agendar Consulta Gratuita</a>
                   <button 
                     className="cta-btn secondary" 
-                    onClick={() => setTab(TABS.ORCAMENTOS)}
+                    onClick={() => document.querySelector('#orcamentos')?.scrollIntoView({behavior: 'smooth'})}
                   >
                     Solicitar Orçamento
                   </button>
@@ -1898,8 +1761,8 @@ _Formulário enviado via site da VisualTech_`
               </div>
             </div>
           </section>
-        )}
-      </main>
+</section>
+</main>
       <footer className="footer-discreto">© 2025 - Todos os direitos reservados a VisualTech</footer>
     </div>
   )

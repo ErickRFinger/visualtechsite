@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,900;1,900&family=Oswald:wght@500;700&display=swap');
 /* CSS Moderno e Responsivo para Visual Tech */
 * {
   margin: 0;
@@ -29,9 +31,9 @@ body {
   width: 100%;
   height: 100vh;
   background: 
-    radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(0, 255, 0, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(255, 230, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 204, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255, 255, 0, 0.05) 0%, transparent 50%),
     linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #1a1a2e 50%, #16213e 75%, #000000 100%);
   display: flex;
   justify-content: center;
@@ -56,13 +58,13 @@ body {
   width: 100%;
   height: 100%;
   background-image: 
-    radial-gradient(2px 2px at 20px 30px, rgba(0, 255, 255, 0.4), transparent),
-    radial-gradient(2px 2px at 40px 70px, rgba(255, 0, 255, 0.4), transparent),
-    radial-gradient(1px 1px at 90px 40px, rgba(0, 255, 0, 0.5), transparent),
+    radial-gradient(2px 2px at 20px 30px, rgba(255, 230, 0, 0.4), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255, 204, 0, 0.4), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 0, 0.5), transparent),
     radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 0, 0.4), transparent),
-    radial-gradient(2px 2px at 160px 30px, rgba(0, 255, 255, 0.3), transparent),
-    radial-gradient(1px 1px at 200px 60px, rgba(255, 0, 255, 0.3), transparent),
-    radial-gradient(2px 2px at 250px 20px, rgba(0, 255, 0, 0.4), transparent);
+    radial-gradient(2px 2px at 160px 30px, rgba(255, 230, 0, 0.3), transparent),
+    radial-gradient(1px 1px at 200px 60px, rgba(255, 204, 0, 0.3), transparent),
+    radial-gradient(2px 2px at 250px 20px, rgba(255, 255, 0, 0.4), transparent);
   background-repeat: repeat;
   background-size: 300px 150px;
   animation: particleFloat 15s linear infinite, particleGlow 3s ease-in-out infinite;
@@ -73,10 +75,10 @@ body {
   width: 100%;
   height: 100%;
   background-image: 
-    linear-gradient(rgba(0, 255, 255, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 255, 0.15) 1px, transparent 1px),
-    linear-gradient(rgba(255, 0, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 0, 255, 0.1) 1px, transparent 1px);
+    linear-gradient(rgba(255, 230, 0, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 230, 0, 0.15) 1px, transparent 1px),
+    linear-gradient(rgba(255, 204, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 204, 0, 0.1) 1px, transparent 1px);
   background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
   animation: gridMove 25s linear infinite, gridPulse 4s ease-in-out infinite;
 }
@@ -99,9 +101,9 @@ body {
   width: 120px;
   height: auto;
   filter: 
-    drop-shadow(0 0 30px rgba(0, 255, 255, 0.8))
-    drop-shadow(0 0 60px rgba(255, 0, 255, 0.4))
-    drop-shadow(0 0 90px rgba(0, 255, 0, 0.3));
+    drop-shadow(0 0 30px rgba(255, 230, 0, 0.8))
+    drop-shadow(0 0 60px rgba(255, 204, 0, 0.4))
+    drop-shadow(0 0 90px rgba(255, 255, 0, 0.3));
   animation: logoFloat 3s ease-in-out infinite, logoGlitch 8s ease-in-out infinite;
 }
 
@@ -113,7 +115,7 @@ body {
   width: 200px;
   height: 200px;
   background: 
-    radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, rgba(255, 0, 255, 0.2) 30%, transparent 70%);
+    radial-gradient(circle, rgba(255, 230, 0, 0.3) 0%, rgba(255, 204, 0, 0.2) 30%, transparent 70%);
   border-radius: 50%;
   animation: glowPulse 2s ease-in-out infinite, glowRotate 10s linear infinite;
 }
@@ -125,7 +127,7 @@ body {
   transform: translate(-50%, -50%);
   width: 300px;
   height: 300px;
-  border: 2px solid rgba(0, 255, 255, 0.4);
+  border: 2px solid rgba(255, 230, 0, 0.4);
   border-radius: 50%;
   animation: pulseRing 3s ease-in-out infinite, pulseRotate 15s linear infinite;
 }
@@ -138,7 +140,7 @@ body {
   transform: translate(-50%, -50%);
   width: 400px;
   height: 400px;
-  border: 1px solid rgba(255, 0, 255, 0.3);
+  border: 1px solid rgba(255, 204, 0, 0.3);
   border-radius: 50%;
   animation: pulseRing 4s ease-in-out infinite 1s, pulseRotate 20s linear infinite reverse;
 }
@@ -162,15 +164,15 @@ body {
 }
 
 .loading-text-line.highlight {
-  background: linear-gradient(135deg, #00ffff 0%, #ff00ff 25%, #00ff00 50%, #ffff00 75%, #00ffff 100%);
+  background: linear-gradient(135deg, #ffe600 0%, #ffcc00 25%, #ffff00 50%, #ffff00 75%, #ffe600 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 
-    0 0 30px rgba(0, 255, 255, 0.8),
-    0 0 60px rgba(255, 0, 255, 0.4),
-    0 0 90px rgba(0, 255, 0, 0.3);
-  filter: drop-shadow(0 4px 20px rgba(0, 255, 255, 0.5));
+    0 0 30px rgba(255, 230, 0, 0.8),
+    0 0 60px rgba(255, 204, 0, 0.4),
+    0 0 90px rgba(255, 255, 0, 0.3);
+  filter: drop-shadow(0 4px 20px rgba(255, 230, 0, 0.5));
   animation-delay: 0.3s;
   animation: textSlideIn 1s ease-out forwards, textGlow 3s ease-in-out infinite 1s;
 }
@@ -183,41 +185,41 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: rgba(0, 255, 255, 0.1);
+  background: rgba(255, 230, 0, 0.1);
   padding: 12px 20px;
   border-radius: 25px;
-  border: 1px solid rgba(0, 255, 255, 0.4);
+  border: 1px solid rgba(255, 230, 0, 0.4);
   margin-bottom: 1.5rem;
   backdrop-filter: blur(15px);
   animation: slideInUp 1s ease-out 0.6s forwards, deviceGlow 4s ease-in-out infinite 2s;
   opacity: 0;
   transform: translateY(20px);
   box-shadow: 
-    0 0 20px rgba(0, 255, 255, 0.3),
+    0 0 20px rgba(255, 230, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .device-indicator.mobile {
-  border-color: rgba(255, 0, 255, 0.4);
-  background: rgba(255, 0, 255, 0.1);
+  border-color: rgba(255, 204, 0, 0.4);
+  background: rgba(255, 204, 0, 0.1);
   box-shadow: 
-    0 0 20px rgba(255, 0, 255, 0.3),
+    0 0 20px rgba(255, 204, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .device-indicator.desktop {
-  border-color: rgba(0, 255, 0, 0.4);
-  background: rgba(0, 255, 0, 0.1);
+  border-color: rgba(255, 255, 0, 0.4);
+  background: rgba(255, 255, 0, 0.1);
   box-shadow: 
-    0 0 20px rgba(0, 255, 0, 0.3),
+    0 0 20px rgba(255, 255, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .device-icon {
   font-size: 1.5rem;
   filter: 
-    drop-shadow(0 0 10px rgba(0, 255, 255, 0.8))
-    drop-shadow(0 0 20px rgba(255, 0, 255, 0.4));
+    drop-shadow(0 0 10px rgba(255, 230, 0, 0.8))
+    drop-shadow(0 0 20px rgba(255, 204, 0, 0.4));
   animation: iconPulse 2s ease-in-out infinite;
 }
 
@@ -239,10 +241,10 @@ body {
 }
 
 .loading-accent {
-  color: #00ffff;
+  color: #ffe600;
   text-shadow: 
-    0 0 10px rgba(0, 255, 255, 0.8),
-    0 0 20px rgba(255, 0, 255, 0.4);
+    0 0 10px rgba(255, 230, 0, 0.8),
+    0 0 20px rgba(255, 204, 0, 0.4);
   animation: accentGlow 2s ease-in-out infinite;
 }
 
@@ -258,25 +260,25 @@ body {
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 1rem;
-  border: 1px solid rgba(0, 255, 255, 0.3);
+  border: 1px solid rgba(255, 230, 0, 0.3);
   box-shadow: 
     inset 0 1px 3px rgba(0, 0, 0, 0.5),
-    0 0 10px rgba(0, 255, 255, 0.2);
+    0 0 10px rgba(255, 230, 0, 0.2);
 }
 
 .loading-progress-fill {
   height: 100%;
   background: linear-gradient(90deg, 
-    rgba(0, 255, 255, 0.8) 0%, 
-    rgba(255, 0, 255, 0.8) 25%, 
-    rgba(0, 255, 0, 0.8) 50%, 
+    rgba(255, 230, 0, 0.8) 0%, 
+    rgba(255, 204, 0, 0.8) 25%, 
+    rgba(255, 255, 0, 0.8) 50%, 
     rgba(255, 255, 0, 0.8) 75%, 
-    rgba(0, 255, 255, 0.8) 100%);
+    rgba(255, 230, 0, 0.8) 100%);
   border-radius: 3px;
   animation: progressFill 2.5s ease-out forwards, progressGlow 2s ease-in-out infinite 1s;
   box-shadow: 
-    0 0 20px rgba(0, 255, 255, 0.6),
-    0 0 40px rgba(255, 0, 255, 0.3),
+    0 0 20px rgba(255, 230, 0, 0.6),
+    0 0 40px rgba(255, 204, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
@@ -306,7 +308,7 @@ body {
   font-size: 1rem;
   color: #cccccc;
   font-weight: 500;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  text-shadow: 0 0 10px rgba(255, 230, 0, 0.3);
   animation: statusGlow 3s ease-in-out infinite;
 }
 
@@ -318,10 +320,10 @@ body {
 .loading-dots span {
   width: 8px;
   height: 8px;
-  background: linear-gradient(45deg, rgba(0, 255, 255, 0.8), rgba(255, 0, 255, 0.8));
+  background: linear-gradient(45deg, rgba(255, 230, 0, 0.8), rgba(255, 204, 0, 0.8));
   border-radius: 50%;
   animation: dotPulse 1.5s ease-in-out infinite;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(255, 230, 0, 0.5);
 }
 
 .loading-dots span:nth-child(2) {
@@ -367,7 +369,7 @@ body {
 
 .feature-icon {
   font-size: 1.2rem;
-  filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.6));
+  filter: drop-shadow(0 0 8px rgba(255, 230, 0, 0.6));
   animation: iconFloat 2s ease-in-out infinite;
 }
 
@@ -467,7 +469,7 @@ body {
   background: 
     radial-gradient(circle at 20% 80%, rgba(255, 230, 0, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 40% 40%, rgba(255, 230, 0, 0.1) 0%, transparent 50%);
   animation: backgroundShift 20s ease-in-out infinite;
 }
 
@@ -482,13 +484,13 @@ body {
   background-image: 
     radial-gradient(2px 2px at 20px 30px, rgba(255, 230, 0, 0.8), transparent),
     radial-gradient(2px 2px at 40px 70px, rgba(138, 43, 226, 0.8), transparent),
-    radial-gradient(1px 1px at 90px 40px, rgba(0, 255, 255, 0.8), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255, 230, 0, 0.8), transparent),
     radial-gradient(1px 1px at 130px 80px, rgba(255, 230, 0, 0.6), transparent),
     radial-gradient(2px 2px at 160px 30px, rgba(138, 43, 226, 0.6), transparent),
-    radial-gradient(1px 1px at 200px 60px, rgba(0, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 200px 60px, rgba(255, 230, 0, 0.6), transparent),
     radial-gradient(2px 2px at 240px 20px, rgba(255, 230, 0, 0.4), transparent),
     radial-gradient(1px 1px at 280px 70px, rgba(138, 43, 226, 0.4), transparent),
-    radial-gradient(1px 1px at 320px 40px, rgba(0, 255, 255, 0.4), transparent);
+    radial-gradient(1px 1px at 320px 40px, rgba(255, 230, 0, 0.4), transparent);
   background-repeat: repeat;
   background-size: 300px 100px;
   animation: particleFloat 15s linear infinite;
@@ -516,27 +518,27 @@ body {
 @keyframes logoGlitch {
   0%, 100% { 
     filter: 
-      drop-shadow(0 0 30px rgba(0, 255, 255, 0.8))
-      drop-shadow(0 0 60px rgba(255, 0, 255, 0.4))
-      drop-shadow(0 0 90px rgba(0, 255, 0, 0.3));
+      drop-shadow(0 0 30px rgba(255, 230, 0, 0.8))
+      drop-shadow(0 0 60px rgba(255, 204, 0, 0.4))
+      drop-shadow(0 0 90px rgba(255, 255, 0, 0.3));
   }
   25% { 
     filter: 
-      drop-shadow(0 0 30px rgba(255, 0, 255, 0.8))
-      drop-shadow(0 0 60px rgba(0, 255, 0, 0.4))
-      drop-shadow(0 0 90px rgba(0, 255, 255, 0.3));
+      drop-shadow(0 0 30px rgba(255, 204, 0, 0.8))
+      drop-shadow(0 0 60px rgba(255, 255, 0, 0.4))
+      drop-shadow(0 0 90px rgba(255, 230, 0, 0.3));
   }
   50% { 
     filter: 
-      drop-shadow(0 0 30px rgba(0, 255, 0, 0.8))
+      drop-shadow(0 0 30px rgba(255, 255, 0, 0.8))
       drop-shadow(0 0 60px rgba(255, 255, 0, 0.4))
-      drop-shadow(0 0 90px rgba(255, 0, 255, 0.3));
+      drop-shadow(0 0 90px rgba(255, 204, 0, 0.3));
   }
   75% { 
     filter: 
       drop-shadow(0 0 30px rgba(255, 255, 0, 0.8))
-      drop-shadow(0 0 60px rgba(0, 255, 255, 0.4))
-      drop-shadow(0 0 90px rgba(0, 255, 0, 0.3));
+      drop-shadow(0 0 60px rgba(255, 230, 0, 0.4))
+      drop-shadow(0 0 90px rgba(255, 255, 0, 0.3));
   }
 }
 
@@ -553,14 +555,14 @@ body {
 @keyframes textGlow {
   0%, 100% { 
     text-shadow: 
-      0 0 30px rgba(0, 255, 255, 0.8),
-      0 0 60px rgba(255, 0, 255, 0.4),
-      0 0 90px rgba(0, 255, 0, 0.3);
+      0 0 30px rgba(255, 230, 0, 0.8),
+      0 0 60px rgba(255, 204, 0, 0.4),
+      0 0 90px rgba(255, 255, 0, 0.3);
   }
   50% { 
     text-shadow: 
-      0 0 50px rgba(255, 0, 255, 0.8),
-      0 0 100px rgba(0, 255, 0, 0.4),
+      0 0 50px rgba(255, 204, 0, 0.8),
+      0 0 100px rgba(255, 255, 0, 0.4),
       0 0 150px rgba(255, 255, 0, 0.3);
   }
 }
@@ -568,12 +570,12 @@ body {
 @keyframes deviceGlow {
   0%, 100% { 
     box-shadow: 
-      0 0 20px rgba(0, 255, 255, 0.3),
+      0 0 20px rgba(255, 230, 0, 0.3),
       inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
   50% { 
     box-shadow: 
-      0 0 40px rgba(0, 255, 255, 0.6),
+      0 0 40px rgba(255, 230, 0, 0.6),
       inset 0 1px 0 rgba(255, 255, 255, 0.2);
   }
 }
@@ -581,26 +583,26 @@ body {
 @keyframes iconPulse {
   0%, 100% { 
     filter: 
-      drop-shadow(0 0 10px rgba(0, 255, 255, 0.8))
-      drop-shadow(0 0 20px rgba(255, 0, 255, 0.4));
+      drop-shadow(0 0 10px rgba(255, 230, 0, 0.8))
+      drop-shadow(0 0 20px rgba(255, 204, 0, 0.4));
   }
   50% { 
     filter: 
-      drop-shadow(0 0 20px rgba(255, 0, 255, 0.8))
-      drop-shadow(0 0 40px rgba(0, 255, 0, 0.4));
+      drop-shadow(0 0 20px rgba(255, 204, 0, 0.8))
+      drop-shadow(0 0 40px rgba(255, 255, 0, 0.4));
   }
 }
 
 @keyframes accentGlow {
   0%, 100% { 
     text-shadow: 
-      0 0 10px rgba(0, 255, 255, 0.8),
-      0 0 20px rgba(255, 0, 255, 0.4);
+      0 0 10px rgba(255, 230, 0, 0.8),
+      0 0 20px rgba(255, 204, 0, 0.4);
   }
   50% { 
     text-shadow: 
-      0 0 20px rgba(255, 0, 255, 0.8),
-      0 0 40px rgba(0, 255, 0, 0.4);
+      0 0 20px rgba(255, 204, 0, 0.8),
+      0 0 40px rgba(255, 255, 0, 0.4);
   }
 }
 
@@ -608,24 +610,24 @@ body {
 @keyframes progressGlow {
   0%, 100% { 
     box-shadow: 
-      0 0 20px rgba(0, 255, 255, 0.6),
-      0 0 40px rgba(255, 0, 255, 0.3),
+      0 0 20px rgba(255, 230, 0, 0.6),
+      0 0 40px rgba(255, 204, 0, 0.3),
       inset 0 1px 0 rgba(255, 255, 255, 0.3);
   }
   50% { 
     box-shadow: 
-      0 0 30px rgba(255, 0, 255, 0.8),
-      0 0 60px rgba(0, 255, 0, 0.4),
+      0 0 30px rgba(255, 204, 0, 0.8),
+      0 0 60px rgba(255, 255, 0, 0.4),
       inset 0 1px 0 rgba(255, 255, 255, 0.5);
   }
 }
 
 @keyframes statusGlow {
   0%, 100% { 
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    text-shadow: 0 0 10px rgba(255, 230, 0, 0.3);
   }
   50% { 
-    text-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+    text-shadow: 0 0 20px rgba(255, 204, 0, 0.6);
   }
 }
 
@@ -636,10 +638,10 @@ body {
 
 @keyframes featureGlow {
   0%, 100% { 
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 15px rgba(255, 230, 0, 0.2);
   }
   50% { 
-    box-shadow: 0 0 25px rgba(255, 0, 255, 0.4);
+    box-shadow: 0 0 25px rgba(255, 204, 0, 0.4);
   }
 }
 
@@ -2252,7 +2254,7 @@ body {
   background: linear-gradient(135deg, 
     rgba(255, 230, 0, 0.08) 0%, 
     rgba(138, 43, 226, 0.05) 25%, 
-    rgba(0, 255, 255, 0.03) 50%, 
+    rgba(255, 230, 0, 0.03) 50%, 
     rgba(255, 230, 0, 0.08) 75%, 
     rgba(138, 43, 226, 0.05) 100%);
   border-top: 3px solid rgba(255, 230, 0, 0.4);
@@ -7928,9 +7930,9 @@ body {
   .loading-logo {
     width: 100px;
     filter: 
-      drop-shadow(0 0 20px rgba(0, 255, 255, 0.6))
-      drop-shadow(0 0 40px rgba(255, 0, 255, 0.3))
-      drop-shadow(0 0 60px rgba(0, 255, 0, 0.2));
+      drop-shadow(0 0 20px rgba(255, 230, 0, 0.6))
+      drop-shadow(0 0 40px rgba(255, 204, 0, 0.3))
+      drop-shadow(0 0 60px rgba(255, 255, 0, 0.2));
   }
   
   .logo-glow {
@@ -7977,9 +7979,9 @@ body {
   .loading-logo {
     width: 80px;
     filter: 
-      drop-shadow(0 0 15px rgba(0, 255, 255, 0.5))
-      drop-shadow(0 0 30px rgba(255, 0, 255, 0.2))
-      drop-shadow(0 0 45px rgba(0, 255, 0, 0.1));
+      drop-shadow(0 0 15px rgba(255, 230, 0, 0.5))
+      drop-shadow(0 0 30px rgba(255, 204, 0, 0.2))
+      drop-shadow(0 0 45px rgba(255, 255, 0, 0.1));
   }
   
   .logo-glow {
@@ -8128,3 +8130,1130 @@ body {
   font-size: 1.2rem;
   z-index: 1;
 }
+/* ================== SCOLLYTELLING BASE ================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #000;
+  color: #fff;
+}
+
+main > section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  border-bottom: 2px solid rgba(255, 230, 0, 0.1);
+}
+
+.hero-background {
+  will-change: transform;
+}
+
+/* ================== SIMPLE LOADING SCREEN ================== */
+.loading-screen.simple {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-logo.simple-logo {
+  width: 150px;
+  filter: drop-shadow(0 0 15px rgba(255, 230, 0, 0.5));
+  animation: pulseLogo 2s infinite alternate;
+  margin-bottom: 30px;
+}
+
+.loading-progress-bar.simple-bar {
+  width: 200px;
+  height: 4px;
+  background: #222;
+  border: none;
+  border-radius: 2px;
+  margin: 0 auto;
+  box-shadow: none;
+}
+
+.loading-progress-bar.simple-bar .loading-progress-fill {
+  background: #ffe600;
+  box-shadow: 0 0 10px rgba(255, 230, 0, 0.8);
+  animation: fillProgress 1.5s ease-out forwards;
+}
+
+@keyframes pulseLogo {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.05); opacity: 1; filter: drop-shadow(0 0 25px rgba(255, 230, 0, 1)); }
+}
+
+@keyframes fillProgress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+  
+
+/* ================== FASE 2: OVERHAUL PREMIUM ================== */
+
+/* Headers & Glassmorphism */
+.header-visualtech-central {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  background: rgba(10, 10, 10, 0.85) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 230, 0, 0.1) !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px !important;
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8) !important;
+  transition: all 0.3s ease;
+}
+
+.logo-central {
+  height: 40px !important;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5)) !important;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.logo-central:hover {
+  transform: scale(1.08) rotate(-2deg);
+  filter: drop-shadow(0 0 15px rgba(255, 230, 0, 0.5)) !important;
+}
+
+/* Nav Menu */
+.menu-central {
+  display: flex !important;
+  gap: 30px !important;
+  align-items: center;
+}
+.menu-central button {
+  background: transparent !important;
+  border: none !important;
+  color: #d1d5db !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 5px 0 !important;
+  margin: 0 !important;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  box-shadow: none !important;
+}
+.menu-central button:hover {
+  color: #ffe600 !important;
+  transform: translateY(-2px);
+  background: transparent !important;
+}
+.menu-central button::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ffe600;
+  transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 0 8px rgba(255,230,0,0.8);
+}
+.menu-central button:hover::after {
+  width: 100%;
+}
+
+/* Search Box Modernizado */
+.search-container {
+  margin: 0 20px !important;
+  position: relative;
+}
+.search-input {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #f3f4f6 !important;
+  border-radius: 50px !important;
+  padding: 12px 20px 12px 45px !important;
+  font-size: 0.9rem !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  width: 220px !important;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.2) !important;
+}
+.search-input:focus {
+  background: rgba(20, 20, 20, 0.9) !important;
+  border-color: #ffe600 !important;
+  box-shadow: 0 0 20px rgba(255, 230, 0, 0.2), inset 0 2px 5px rgba(0,0,0,0.5) !important;
+  outline: none;
+  width: 320px !important;
+}
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+  pointer-events: none;
+  font-size: 1rem;
+}
+
+/* CTAs e Botoes - Estetica Luxuosa */
+.cta-btn, .whatsapp-btn, .btn-buy, .plano-btn, .card-btn, button[type="submit"] {
+  background: linear-gradient(135deg, #ffe600, #ffb700) !important;
+  color: #111 !important;
+  font-weight: 800 !important;
+  font-size: 0.95rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.2px;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 14px 32px !important;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4), 0 0 10px rgba(255, 230, 0, 0.2) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.cta-btn::before, .whatsapp-btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transform: skewX(-25deg);
+  transition: 0.5s;
+}
+.cta-btn:hover::before, .whatsapp-btn:hover::before {
+  left: 150%;
+}
+.cta-btn:hover, .whatsapp-btn:hover, button[type="submit"]:hover {
+  transform: translateY(-4px) scale(1.03) !important;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 230, 0, 0.4) !important;
+  background: linear-gradient(135deg, #fff04d, #ffcc00) !important;
+  color: #000 !important;
+}
+
+/* Typography and Spacing */
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 4rem) !important;
+  font-weight: 900 !important;
+  letter-spacing: -1.5px;
+  text-align: center;
+  margin-bottom: 1.5rem !important;
+  background: linear-gradient(to bottom right, #ffffff, #aaaaaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none !important;
+  position: relative;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ffe600;
+  margin: 20px auto 0;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(255,230,0,0.5);
+}
+.section-subtitle {
+  font-size: 1.25rem !important;
+  color: #9ca3af !important;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 5rem auto !important;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* Cards Premium */
+.servico-card, .diferencial-card, .desenvolvimento-card, .pacote-card, .plano-card {
+  background: linear-gradient(145deg, rgba(30, 30, 30, 0.8), rgba(15, 15, 15, 0.95)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.03) !important;
+  border-radius: 20px !important;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+  overflow: hidden;
+  position: relative;
+}
+.servico-card::after, .diferencial-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 1px rgba(255, 230, 0, 0);
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+.servico-card:hover, .diferencial-card:hover, .desenvolvimento-card:hover, .pacote-card:hover, .plano-card:hover {
+  transform: translateY(-10px) !important;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 230, 0, 0.05) !important;
+  background: linear-gradient(145deg, rgba(40, 40, 40, 0.9), rgba(15, 15, 15, 0.95)) !important;
+}
+.servico-card:hover::after, .diferencial-card:hover::after {
+  box-shadow: inset 0 0 0 1px rgba(255, 230, 0, 0.3);
+}
+.card-icon, .servico-icon {
+  background: rgba(255,230,0,0.1) !important;
+  color: #ffe600 !important;
+  border-radius: 12px !important;
+  padding: 15px !important;
+}
+
+/* Forms Elevados */
+.form-orcamento-modern {
+  background: rgba(15, 15, 15, 0.7) !important;
+  border-radius: 24px !important;
+  border: 1px solid rgba(255,255,255,0.05) !important;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5) !important;
+  padding: 40px !important;
+}
+input, select, textarea {
+  background: rgba(5, 5, 5, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #fff !important;
+  border-radius: 12px !important;
+  padding: 16px 20px !important;
+  font-family: inherit;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+}
+input:focus, select:focus, textarea:focus {
+  background: rgba(20, 20, 20, 1) !important;
+  border-color: #ffe600 !important;
+  box-shadow: 0 0 0 3px rgba(255, 230, 0, 0.15) !important;
+  outline: none;
+}
+
+/* Layout Padding Fix from removing tabs */
+main > section {
+  padding: 120px 5% 80px 5% !important;
+}
+
+/* Guarantee old produtos is entirely hidden */
+#produtos, .produtos-section {
+  display: none !important;
+}
+  
+
+/* ================== FASE 3: LUXURY & SEARCH FIX ================== */
+
+
+body, html {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  background: #030303 !important; /* Deeper black */
+}
+
+/* Background Gradients Fix */
+.layout-visualtech, .main-visualtech {
+  background: radial-gradient(circle at 15% 50%, rgba(255, 230, 0, 0.04) 0%, transparent 50%),
+              radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+              #030303 !important;
+}
+
+/* Perfected Search Component */
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 10px !important;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.search-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  background: rgba(15, 15, 15, 0.8) !important;
+  border: 1px solid rgba(255, 230, 0, 0.3) !important;
+  color: #fff !important;
+  border-radius: 50px !important;
+  padding: 12px 50px 12px 25px !important; 
+  font-size: 0.95rem !important;
+  font-weight: 500;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  width: 200px !important;
+  box-shadow: inset 0 2px 10px rgba(0,0,0,0.8) !important;
+  letter-spacing: 0.5px;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 400;
+}
+
+.search-input:focus {
+  background: rgba(5, 5, 5, 0.95) !important;
+  border-color: #ffe600 !important;
+  box-shadow: 0 0 20px rgba(255, 230, 0, 0.4), inset 0 2px 5px rgba(0,0,0,0.9) !important;
+  width: 280px !important;
+}
+
+.search-actions {
+  position: absolute;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+}
+
+.search-icon svg {
+  width: 18px;
+  height: 18px;
+  color: #ffe600;
+  filter: drop-shadow(0 0 5px rgba(255,230,0,0.5));
+  transition: all 0.3s ease;
+}
+
+.search-input:focus + .search-actions .search-icon svg {
+  filter: drop-shadow(0 0 12px rgba(255,230,0,0.9));
+  transform: scale(1.1);
+}
+
+.search-clear-btn {
+  background: rgba(255,255,255,0.1) !important;
+  border: none !important;
+  color: #fff !important;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 10px;
+  transition: all 0.2s ease !important;
+}
+.search-clear-btn:hover {
+  background: #ffe600 !important;
+  color: #000 !important;
+  box-shadow: 0 0 10px rgba(255,230,0,0.6);
+}
+
+/* More pronounced glow effects on hoverable cards */
+.servico-card, .diferencial-card, .desenvolvimento-card, .pacote-card, .plano-card {
+  background: linear-gradient(160deg, rgba(20, 20, 20, 0.9), rgba(5, 5, 5, 0.95)) !important;
+  border: 1px solid rgba(255, 230, 0, 0.1) !important;
+}
+
+.servico-card:hover, .diferencial-card:hover, .desenvolvimento-card:hover, .pacote-card:hover, .plano-card:hover {
+  border-color: rgba(255, 230, 0, 0.6) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9), 0 0 30px rgba(255, 230, 0, 0.2) !important;
+  transform: translateY(-12px) scale(1.02) !important;
+  z-index: 10;
+}
+
+.card-icon, .servico-icon {
+  background: linear-gradient(135deg, rgba(255,230,0,0.2), rgba(255,230,0,0.05)) !important;
+  box-shadow: inset 0 0 0 1px rgba(255,230,0,0.3), 0 0 15px rgba(255,230,0,0.1) !important;
+}
+  
+
+/* ================== FASE 4: FIXES & STANDARDIZATION ================== */
+
+/* 1. Logo Aspect Ratio Fix */
+.logo-central {
+  width: auto !important;
+  height: 40px !important;
+  object-fit: contain !important;
+}
+
+/* 2. Correct Search Bar Overlap */
+/* Remove ANY background or border from the wrappers holding the input */
+.search-container, 
+.search-input-wrapper, 
+.search-input-container {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+.search-container::before, .search-container::after,
+.search-input-wrapper::before, .search-input-wrapper::after,
+.search-input-container::before, .search-input-container::after {
+  display: none !important;
+}
+
+.search-input {
+  background: #111 !important;
+  border: 1px solid rgba(255, 230, 0, 0.4) !important;
+  color: #fff !important;
+  border-radius: 40px !important;
+  padding: 12px 50px 12px 20px !important; 
+  font-size: 0.95rem !important;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.5) !important;
+  margin: 0 !important;
+  width: 220px !important;
+  box-sizing: border-box !important;
+}
+.search-input:focus {
+  background: #000 !important;
+  border-color: #ffe600 !important;
+  width: 280px !important;
+  box-shadow: 0 0 15px rgba(255, 230, 0, 0.3) !important;
+}
+
+.search-actions {
+  right: 15px !important;
+  background: transparent !important; 
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.search-results {
+  background: #111 !important;
+  border: 1px solid rgba(255, 230, 0, 0.2) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8) !important;
+  border-radius: 12px !important;
+}
+.search-result-item:hover {
+  background: rgba(255, 230, 0, 0.1) !important;
+}
+
+/* 3. Global Form Standardization */
+:root {
+  color-scheme: dark;
+}
+
+.form-section .section-title {
+  display: flex !important;
+  align-items: center !important;
+  font-size: 1.6rem !important;
+  color: #fff !important;
+  text-align: left !important;
+  margin-bottom: 2rem !important;
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.05) !important;
+}
+
+.form-section .section-title::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 24px;
+  background: #ffe600;
+  margin-right: 15px;
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(255, 230, 0, 0.5);
+}
+.form-section .section-title::after {
+  display: none !important;
+}
+
+/* Container de Orcamento */
+.form-orcamento-modern {
+  background: #0a0a0a !important;
+  border: 1px solid rgba(255, 255, 255, 0.03) !important;
+  border-radius: 16px !important;
+}
+
+input, select, textarea {
+  background: #151515 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  padding: 14px 20px !important;
+  font-size: 1rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+select {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffe600' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 15px center !important;
+  background-size: 16px !important;
+  padding-right: 40px !important;
+}
+
+select option {
+  background: #111 !important;
+  color: #fff !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  background: #000 !important;
+  border-color: #ffe600 !important;
+  box-shadow: 0 0 0 2px rgba(255, 230, 0, 0.1) !important;
+}
+
+.form-group label {
+  color: #a0a0a0 !important;
+  font-weight: 500 !important;
+  margin-bottom: 8px !important;
+  display: block;
+}
+
+/* 4. Global Cleanliness */
+.cta-btn, .whatsapp-btn, .btn-buy, .plano-btn, .card-btn, button[type="submit"] {
+  background: #ffe600 !important; 
+  color: #000 !important;
+  font-weight: 700 !important;
+}
+.cta-btn:hover, .whatsapp-btn:hover, button[type="submit"]:hover {
+  background: #fff04d !important;
+  box-shadow: 0 8px 20px rgba(255, 230, 0, 0.3) !important;
+  color: #000 !important;
+}
+
+
+/* ================== FASE 5: LANDO NORRIS BRUTALIST MOTORSPORT VIBE ================== */
+
+
+body, html {
+  background: #000 !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* ================== HERO / TITLE ================== */
+.lando-title {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 900 !important;
+  font-style: italic !important;
+  font-size: clamp(4rem, 12vw, 10rem) !important;
+  line-height: 0.8 !important;
+  text-transform: uppercase !important;
+  margin: 20px 0 !important;
+  position: relative;
+  z-index: 10;
+  letter-spacing: -3px;
+}
+
+.hollow-text {
+  color: transparent !important;
+  -webkit-text-stroke: 2px #ffe600 !important;
+  display: block;
+  transform: translateX(-5%);
+}
+
+.solid-text {
+  color: #ffe600 !important;
+  display: block;
+}
+
+.lando-subtitle {
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 1.5rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  color: #fff !important;
+  margin-top: 30px !important;
+}
+
+.text-highlight-lando {
+  background: #ffe600;
+  color: #000;
+  padding: 0 10px;
+  font-weight: 700;
+}
+
+/* ================== MARQUEE ANIMATION ================== */
+.marquee-container {
+  width: 100vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-marquee 15s linear infinite;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 8rem;
+  color: #ffe600;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+}
+
+@keyframes scroll-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } 
+}
+
+/* ================== BUTTONS & CTAs ================== */
+.cta-btn, .whatsapp-btn, .btn-buy, .plano-btn, .card-btn, button[type="submit"] {
+  border-radius: 0 !important;
+  font-family: 'Oswald', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  background: #ffe600 !important;
+  color: #000 !important;
+  box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.2s ease !important;
+  border: 2px solid #ffe600 !important;
+  position: relative;
+  overflow: visible !important;
+}
+
+.cta-btn:hover, .whatsapp-btn:hover, button[type="submit"]:hover {
+  transform: translate(-3px, -3px) !important;
+  box-shadow: 10px 10px 0px #ffe600 !important;
+  background: #000 !important;
+  color: #ffe600 !important;
+  border-color: #ffe600 !important;
+}
+
+/* Nav Menu */
+.menu-central button {
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 2px !important;
+  border-radius: 0 !important;
+}
+
+/* ================== CARDS & BLOCKS ================== */
+.servico-card, .diferencial-card, .desenvolvimento-card, .pacote-card, .plano-card {
+  border-radius: 0 !important;
+  background: #0a0a0a !important;
+  border: 2px solid #333 !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.servico-card:hover, .diferencial-card:hover, .desenvolvimento-card:hover, .pacote-card:hover, .plano-card:hover {
+  transform: translate(-5px, -5px) !important;
+  border-color: #ffe600 !important;
+  box-shadow: 8px 8px 0px #ffe600 !important;
+  background: #111 !important;
+}
+
+/* Icons blocky */
+.card-icon, .servico-icon {
+  border-radius: 0 !important;
+  background: #ffe600 !important;
+  color: #000 !important;
+  transform: rotate(-3deg);
+  display: inline-flex;
+  margin-bottom: 20px;
+}
+
+/* ================== FORMS & INPUTS ================== */
+.form-orcamento-modern {
+  border-radius: 0 !important;
+  background: #050505 !important;
+  border: 2px solid #222 !important;
+  box-shadow: 15px 15px 0px #ffe600 !important;
+}
+
+input, select, textarea {
+  border-radius: 0 !important;
+  border: 2px solid #333 !important;
+  background: #000 !important;
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 1.1rem !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #ffe600 !important;
+  box-shadow: 4px 4px 0px #ffe600 !important;
+}
+
+/* ================== GLOBAL TYPOGRAPHY ================== */
+.section-title {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 900 !important;
+  font-style: italic !important;
+  font-size: clamp(3rem, 8vw, 6rem) !important;
+  text-transform: uppercase !important;
+  letter-spacing: -2px;
+  background: none !important;
+  -webkit-text-fill-color: #fff !important;
+  text-align: left !important;
+  border-left: 10px solid #ffe600;
+  padding-left: 20px;
+}
+.section-title::after, .section-title::before {
+  display: none !important;
+}
+.section-subtitle {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1rem !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left !important;
+  margin-left: 30px !important;
+  color: #888 !important;
+}
+  
+
+/* ================== FASE 6: PRICING & STACKED FIXES ================== */
+.price-value {
+  font-size: clamp(1.8rem, 4vw, 3rem) !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 1.1;
+}
+
+main > section {
+  background: #050505; 
+  position: relative;
+  z-index: 1;
+}
+
+/* Base style for sections to receive generated images */
+.servicos-section {
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('/bg-1.png') !important;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.tecnica-section {
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('/bg-2.png') !important;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.desenvolvimento-section {
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('/bg-3.png') !important;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+main > section:not(:first-child) {
+  box-shadow: 0 -10px 40px rgba(0,0,0,0.8);
+  border-top: 1px solid rgba(255,230,0,0.1);
+}
+  
+
+/* ================== FASE 7: TYPOGRAPHY FIXES E TECH THEME ================== */
+
+/* Fix clipped titles */
+.section-title {
+  font-size: clamp(2rem, 5vw, 4rem) !important;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  line-height: 1.1 !important;
+  padding-right: 10px !important;
+}
+
+/* Redefined Minimal Loading Screen */
+.loading-screen.ultra-minimal {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+.loading-text {
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  animation: pulseText 1.5s infinite alternate;
+}
+@keyframes pulseText {
+  0% { opacity: 0.5; }
+  100% { opacity: 1; text-shadow: 0 0 15px rgba(255,255,255,0.5); }
+}
+
+/* Background mappings for new Tech images */
+.servicos-section {
+  background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)), url('/bg-tech-1.png') !important;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.tecnica-section {
+  background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)), url('/bg-tech-2.png') !important;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.desenvolvimento-section {
+  background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)), url('/bg-tech-3.png') !important;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+  
+
+/* ================== FASE 8: SCROLL SNAPPING ================== */
+body {
+  overflow: hidden !important; 
+}
+.main-visualtech {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+.main-visualtech::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+main > section {
+  height: 100vh !important;
+  min-height: 100vh !important;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  overflow-y: auto; /* Enable internal scroll if content overflows the 100vh viewport */
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center; /* Center items vertically as a 'slide' */
+  padding-top: 60px !important; /* Offset for the sticky header */
+}
+
+/* Ensure the title does not cut off in Development tab or others */
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem) !important; 
+  white-space: normal !important;
+  word-wrap: break-word !important; 
+  padding-right: 20px;
+  line-height: 1.1 !important;
+}
+
+/* Background image containment fix to avoid tiling unpleasantly */
+.servicos-section, .tecnica-section, .desenvolvimento-section {
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: scroll !important; /* Fixed attachment behaves weirdly with JS snap/transform on mobiles */
+}
+  
+
+/* ================== FASE 9: EXPANSÃO BLACK & YELLOW PHOTOGRAPHY ================== */
+
+.diferenciais-section {
+  background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)), url('/bg-tech-4.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: scroll !important;
+}
+
+.planos-section, .pacotes-section {
+  background-image: linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.98)), url('/bg-tech-5.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: scroll !important;
+}
+
+.orcamento-section {
+  background-image: linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.95)), url('/bg-tech-6.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: scroll !important;
+}
+
+/* Garante que Hero Section fique inteiramente Preta, ou podemos usar background */
+.hero-section {
+  background: #000 !important;
+}
+  
+
+/* ================== FASE 10: FIX SCROLL OVERLAPS ================== */
+
+/* Unlock the body scroll */
+body {
+  overflow: auto !important; 
+  overflow-x: hidden !important;
+}
+
+/* Remove mandatory snapping and locked heights */
+.main-visualtech {
+  height: auto !important;
+  overflow-y: visible !important;
+  scroll-snap-type: none !important;
+}
+
+main > section {
+  height: auto !important; /* Let content dictate height, fixing the overlap */
+  min-height: 100vh !important; /* Ensure it takes at least one full screen */
+  scroll-snap-align: none !important;
+  scroll-snap-stop: normal !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 20px !important; /* Add generous padding so sections breathe */
+}
+
+/* Ensure the hero section is perfectly full screen, but other sections can grow */
+.hero-section {
+  min-height: 100vh !important;
+  padding: 0 !important;
+}
+  
+
+/* ================== FASE 11: TRUE FULLPAGE SNAP & MENU BRUTALISTA ================== */
+
+/* 1. Header Brutalista (Lando Norris Style) */
+.header-visualtech-central {
+  background: #000 !important;
+  border-bottom: 2px solid #222 !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.9) !important;
+  border-radius: 0 !important; 
+  padding: 15px 40px !important;
+}
+
+.menu-central {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.menu-central button {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 0.95rem !important;
+  color: #fff !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  text-transform: uppercase !important;
+  padding: 10px 15px !important;
+  margin: 0 5px !important;
+  position: relative;
+  letter-spacing: 1.5px !important;
+}
+
+.menu-central button:hover {
+  color: #ffe600 !important;
+}
+
+/* Hover sublinhado agressivo */
+.menu-central button::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: #ffe600;
+  transition: width 0.3s ease;
+}
+
+.menu-central button:hover::after {
+  width: 100%;
+}
+
+/* 2. True Fullpage Snap with Internal Scroll */
+body {
+  overflow: hidden !important; /* Trava o scroll global */
+}
+
+.main-visualtech {
+  height: 100vh !important;
+  overflow-y: scroll !important;
+  scroll-snap-type: y mandatory !important;
+}
+
+main > section {
+  height: 100vh !important;
+  min-height: 100vh !important;
+  scroll-snap-align: start !important;
+  scroll-snap-stop: always !important;
+  
+  /* ESSE É O SEGREDO DO BUG: Seção rola por dentro se o conteúdo for gigante */
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  
+  box-sizing: border-box !important;
+  padding: 80px 20px 40px !important; 
+}
+
+/* Hide inner scrollbars for clean presentation */
+main > section::-webkit-scrollbar, .main-visualtech::-webkit-scrollbar {
+  width: 8px;
+}
+main > section::-webkit-scrollbar-track, .main-visualtech::-webkit-scrollbar-track {
+  background: #000; 
+}
+main > section::-webkit-scrollbar-thumb, .main-visualtech::-webkit-scrollbar-thumb {
+  background: #ffe600;
+  border-radius: 0px;
+}
+  
+
+/* ================== FASE 12: DYNAMIC HEIGHT SNAP FIX ================== */
+
+/* 1. Global Scroll Unlocking */
+body {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+/* 2. Container Snap */
+.main-visualtech {
+  height: 100vh !important;
+  overflow-y: auto !important;
+  scroll-snap-type: y proximity !important; /* Mudado de mandatory para proximity para evitar travamento em seções muito grandes */
+}
+
+/* 3. Section Fluidity - ALOW GROWING! */
+main > section {
+  height: max-content !important; /* Deixa o conteúdo ditar a altura, NUNCA mais corta */
+  min-height: 100vh !important;   /* Pelo menos ocupa a tela toda para fazer o efeito de Slide */
+  scroll-snap-align: start !important;
+  scroll-snap-stop: normal !important;
+  overflow-y: visible !important; /* Desativa scroll interno duplo que bugou o layout */
+  padding: 120px 20px 60px !important; /* Espaçamento seguro para conteúdo abaixo do header */
+  box-sizing: border-box !important;
+  position: relative !important;
+}
+
+/* Garantir que Hero section seja só 100vh cravado sem paddings invasivos */
+.hero-section {
+  padding: 0 !important;
+}
+  
+
+/* ================== FASE 13: FLUID SCROLL (KILL CSS SNAP BUG) ================== */
+
+html, body {
+  scroll-snap-type: none !important;
+  scroll-behavior: smooth !important;
+  overscroll-behavior-y: none !important; /* Evita aquele "pulo" do navegador no topo/fundo */
+}
+
+.main-visualtech {
+  scroll-snap-type: none !important;
+  scroll-behavior: smooth !important;
+}
+
+main > section {
+  scroll-snap-align: none !important; /* Desativa a ancoragem magnética que trava o mouse */
+  scroll-snap-stop: normal !important;
+}
+
+/* Enhancing the GSAP reveal to feel more "Slidey" since we removed Snap */
+.scroll-animate {
+  will-change: transform, opacity;
+}
+  
